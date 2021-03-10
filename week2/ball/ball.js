@@ -1,6 +1,6 @@
 
 const radius = 10;
-const ball = {x:20, y:0, dx: 5, dy: 1};
+const ball = {x:Math.random() * 400, y:0, dx: 5, dy: 1};
 let   old  = {x: ball.x, y: ball.y};
 const gravity = 1;
 

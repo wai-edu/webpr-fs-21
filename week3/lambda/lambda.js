@@ -10,7 +10,22 @@ const F     = snd;
 const and   = p => q => p ( q ) ( p ) ;
 
 
+const id = (x) => x;
+const konst = (x) => (y) => x;
+const snd = (y) => (x) => x;
 
+// const T = (x) => (y) => x;
+const T = konst;
+// const F = (x) => (y) => y;
+const F = snd;
+
+// const and = (p) => (q) => p(q(T)(F))(q(F)(F))
+const and = (p) => (q) => p(q)(p);
+// const and = (p) => (q) => p(q(T)(T))(q(T)(F))
+const or = (p) => (q) => p(p)(q);
+
+const flip = (f) => (x) => (y) => f(y)(x);
+                     
 
 // ----- special -----
 
